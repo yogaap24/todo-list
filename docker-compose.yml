@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+    trans:
+        build: .
+        container_name: trans
+        ports:
+            - "8080:80"
+        volumes:
+            - app-storage:/var/www/html/storage/
+volumes:
+    app-storage:
